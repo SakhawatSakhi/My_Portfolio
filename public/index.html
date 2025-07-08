@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <link rel="icon" type="img/x-icon" href="assets/img/sakhi.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-[var(--themeColor)] flex flex-col gap-8">
+  <header
+    class="header min-h-[65px] fixed top-0 left-0 w-full  bg-[#002B31] z-50 shadow-md flex items-center flex-wrap px-4 md:px-8">
+    <nav class="flex items-center gap-4 justify-between w-full max-w-[1530px] m-auto flex-wrap">
+      <a href="" class="font-bold text-white text-base">Sakhawat Ali's Portfolio</a>
+      <div class="rightSide hidden gap-4 flex-wrap md:gap-8 md:flex">
+        <a href="#heroSection" class="hover:text-[#FFD700] text-white transition hover:underline">Home</a>
+        <a href="#educationSection" class="hover:text-[#FFD700] text-white transition hover:underline">Education</a>
+        <a href="#skillSection" class="hover:text-[#FFD700] text-white transition hover:underline">Skills</a>
+        <a href="#projectSection" class="hover:text-[#FFD700] text-white transition hover:underline">Projects</a>
+        <a href="#certificateSection"
+          class="hover:text-[#FFD700] text-white transition hover:underline">Certificates</a>
+        <a href="#contactSection" class="hover:text-[#FFD700] text-white transition hover:underline">Contact</a>
+      </div>
+      <i id="menu" class="text-white fa-solid fa-bars text-2xl md:!hidden"></i>
+    </nav>
+
+    <div id="mobile-menu"
+      class="fixed top-0 right-0 z-50 h-full w-1/2 bg-[#002B31] shadow-lg flex flex-col gap-4 p-8 text-black transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden">
+      <div class="wrap flex justify-between">
+        <img class="absolute top-4 left-4" src="asset 8.svg" alt="">
+        <i id="close-btn" class="fa-regular fa-circle-xmark  absolute top-4 right-4 text-3xl text-white"></i>
+        <!-- <button  id="close-btn" class="absolute top-4 right-4 text-5xl text-white">&times;</button> -->
+      </div>
+
+      <nav class="mt-8 flex flex-col space-y-6 p-0">
+        <a href="#heroSection" class="hover:text-[#FFD700] text-white">Home</a>
+        <a href="#educationSection" class="hover:text-[#FFD700] text-white">Education</a>
+        <a href="#skillSection" class="hover:text-[#FFD700] text-white">Skills</a>
+        <a href="#projectSection" class="hover:text-[#FFD700] text-white">Projects</a>
+        <a href="#certificateSection" class="hover:text-[#FFD700] text-white">Certificates</a>
+        <a href="#contactSection" class="hover:text-[#FFD700] text-white">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="px-4 w-full max-w-[1530px] mx-auto md:px-8">
+    <section id="heroSection"
+      class="mt-28 heroSection flex flex-col-reverse md:flex-row items-center justify-between gap-12 px-6 lg:px-16 py-10 bg-gradient-to-r from-[#0e4b4b] via-[#072727] to-[#0e4b4b] rounded-3xl shadow-lg overflow-hidden">
+
+      <!-- LEFT: Text and Button -->
+      <div class="bottomContainer text-center md:text-left flex flex-col gap-6 md:w-1/2">
+        <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-snug drop-shadow-xl">
+          Hi, I’m <span class="text-[var(--primaryColor)]">Sakhawat Ali</span>
+        </h1>
+        <h2 class="text-xl md:text-2xl font-semibold text-[#d3f1ec]">
+          A Passionate <span id="element" class="text-[var(--primaryColor)]">Web Developer</span>
+        </h2>
+        <p class="text-[#c5f4ef] text-base md:text-lg leading-relaxed">
+          I’m a full-stack web developer with 1+ years of experience in HTML, CSS, Bootstrap, JavaScript, MySQL & PHP —
+          and growing expertise in React & Node.js.
+        </p>
+
+        <a class="self-center md:self-start" href="CV/Sakhawat CV.pdf" target="_blank">
+          <button
+            class="group bg-[var(--primaryColor)] hover:bg-yellow-400 text-[#002B31] hover:text-black transition-all duration-300 px-8 py-3 rounded-full font-semibold text-lg shadow-lg flex items-center gap-3">
+            <i class="fa-solid fa-download text-xl group-hover:animate-bounce"></i>
+            Download CV
+          </button>
+        </a>
+      </div>
+
+      <!-- RIGHT: Profile Picture + Icons -->
+      <div class="top flex flex-col items-center gap-6">
+        <img src="assets/img/Profile.png" alt="Sakhawat Ali"
+          class="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full border-4 border-[var(--primaryColor)] shadow-xl object-cover transition duration-500 hover:scale-105" />
+
+        <div class="flex flex-wrap justify-center gap-6 mt-2">
+          <!-- GitHub -->
+          <a href="https://github.com/SakhawatSakhi" target="_blank">
+            <i
+              class="fa-brands fa-github text-3xl md:text-4xl text-white hover:text-[var(--primaryColor)] transition"></i>
+          </a>
+
+          <!-- WhatsApp -->
+          <a href="https://wa.me/923412428786?text=Hi%20there!" target="_blank">
+            <i class="fa-brands fa-whatsapp text-3xl md:text-4xl text-white hover:text-green-400 transition"></i>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/sakhi786/" target="_blank">
+            <img src="assets/icons/linkdin.svg" alt="LinkedIn" class="w-8 md:w-10 hover:scale-110 transition" />
+          </a>
+
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/profile.php?id=100010568730827" target="_blank">
+            <i class="fa-brands fa-facebook text-3xl md:text-4xl text-white hover:text-blue-400 transition"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <hr class="mt-12">
+    <!-- EDUCATION Section -->
+    <section id="educationSection" class="educationSection mt-12 gap-4 flex flex-col items-center">
+      <h1
+        class="text-4xl md:text-5xl font-extrabold text-white tracking-wide mb-10 underline decoration-[var(--primaryColor)]">
+        EDUCATION
+      </h1>
+      <p>With a strong foundation in Computer Science, I stay up-to-date with the latest technologies and best
+        practices. My continuous learning and professional development ensure I deliver cutting-edge solutions and
+        exceptional results.</p>
+      <div
+        class="relative educationContainer flex flex-col gap-4 justify-center mt-12 flex-wrap px-4 md:flex-row md:gap-8">
+
+        <div
+          class="educationleftBtn z-10 absolute -left-4 top-[180px] rightArrow w-full max-w-20  h-full max-h-20 bg-[#0e4b4b] shadow-2xl rounded-full flex justify-center items-center text-[var(--primaryColor)] text-4xl font-bold md:hidden">
+          &lt;</div>
+        <div
+          class="educationRightBtn z-10 absolute -right-4 top-[180px] rightArrow  w-full max-w-20  h-full max-h-20 bg-[#0e4b4b] shadow-2xl rounded-full flex justify-center items-center text-[var(--primaryColor)] text-4xl font-bold md:hidden">
+          ></div>
+
+
+        <div data-aos="fade-right" data-aos-duration="1000"
+          class="matrixBox relative flex flex-col gap-4 bg-[#0a3336] shadow-xl w-full max-w-[350px] h-[450px] rounded-2xl items-center p-8">
+          <button
+            class="closeMatricBtn hidden bg-[var(--themeColor)] rounded-full w-10 h-10  z-20 absolute top-0 right-0 text-2xl text-[var(--primaryColor)]">&times;</button>
+          <img class="hidden absolute top-0  z-10 matricCard w-screen h-[450px]" src="assets/img/MrtCard.jpg"
+            alt="Matric Details">
+
+          <div class="outer_border">
+            <div class="iner_border">
+              <span>57%</span>
+            </div>
+          </div>
+          <div class="w-full px-4 text-center space-y-2">
+            <h2
+              class="text-3xl font-bold text-white uppercase tracking-wider border-b-2 border-[var(--primaryColor)] inline-block pb-1">
+              Matriculation
+            </h2>
+            <p class="text-[#cbd5e1] text-lg leading-relaxed">
+              Completed <span class="font-semibold text-white">Matriculation</span> from
+              <span class="text-[var(--primaryColor)] font-medium">Government Boys High School Tormik</span>.
+            </p>
+            <p class="text-sm text-[#9ae6b4] italic">Passed in 2018</p>
+          </div>
+
+          <button id="matrixVerify"
+            class="bg-[var(--primaryColor)] rounded-full mt-auto px-12 py-4 text-[#695900] font-semibold active:bg-[var(--btnActiveColor)]">Verify
+            Now</button>
+        </div>
+
+        <div data-aos="fade-right" data-aos-duration="1000"
+          class="hidden interBox shadow-xl flex-col relative gap-4 bg-[var(--secondaryColor)] w-full max-w-[350px] h-[450px] rounded-2xl pt-6 items-center p-8 md:flex">
+          <button
+            class="closeinterBtn hidden bg-[var(--themeColor)] rounded-full w-10 h-10  z-20 absolute top-0 right-0 text-2xl text-[var(--primaryColor)]">&times;</button>
+          <img class="hidden absolute top-0 z-10 interCard w-screen h-[450px]" src="assets/img/FasCard.png" alt="">
+          <div class="outer_border">
+            <div class="iner_border">
+              <span>60%</span>
+            </div>
+          </div>
+          <div class="w-full px-4 text-center space-y-2">
+            <h2
+              class="text-3xl font-bold text-white uppercase tracking-wider border-b-2 border-[var(--primaryColor)] inline-block pb-1">
+              Intermediate
+            </h2>
+            <p class="text-[#cbd5e1] text-lg leading-relaxed">
+              Completed <span class="font-semibold text-white">Intermediate in Pre-Engineering</span> from
+              <span class="text-[var(--primaryColor)] font-medium">Government Boys Degree College Skardu</span>.
+            </p>
+            <p class="text-sm text-[#9ae6b4] italic">Passed in 2020</p>
+          </div>
+
+          <button
+            class="interVerifyBtn bg-[var(--primaryColor)] rounded-full mt-auto px-12 py-4 text-[#695900] font-semibold active:bg-[var(--btnActiveColor)]">Verify
+            Now</button>
+        </div>
+
+        <div data-aos="fade-right" data-aos-duration="1000"
+          class="hidden uniBox shadow-xl flex-col relative gap-4 bg-[var(--secondaryColor)] w-full max-w-[350px] h-[450px] rounded-2xl pt-6 items-center p-8 md:flex">
+          <button
+            class="closeuniBtn hidden bg-[var(--themeColor)] rounded-full w-10 h-10  z-20 absolute top-0 right-0 text-2xl text-[var(--primaryColor)]">&times;</button>
+          <!-- Graduation Card -->
+          <img class="hidden absolute top-0 z-10 graduationCard w-screen h-[450px]" src="" alt="Graduation Degree">
+          <div class="outer_border">
+            <div class="iner_border">
+              <span>3.4</span>
+            </div>
+          </div>
+          <div class="w-full px-4 text-center space-y-2">
+            <h2
+              class="text-3xl font-bold text-white uppercase tracking-wider border-b-2 border-[var(--primaryColor)] inline-block pb-1">
+              Graduation
+            </h2>
+            <p class="text-[#cbd5e1] text-lg leading-relaxed">
+              Completed a <span class="font-semibold text-white">Bachelor's degree in Computer Science</span> from
+              <span class="text-[var(--primaryColor)] font-medium">University of Baltistan</span>.
+            </p>
+            <p class="text-sm text-[#9ae6b4] italic">Passed in 2024</p>
+          </div>
+
+          <button id="graduationVerify"
+            class="bg-[var(--primaryColor)] rounded-full mt-auto px-12 py-4 text-[#695900] font-semibold active:bg-[var(--btnActiveColor)]">Verify
+            Now</button>
+        </div>
+        <div class="roundContainer flex gap-3 self-center md:hidden">
+          <div class="eduRound1 w-3 h-3 rounded-full bg-[var(--primaryColor)] border border-[--primaryColor]"></div>
+          <div class="eduRound2 w-3 h-3 rounded-full border border-[--primaryColor]"></div>
+          <div class="eduRound3 w-3 h-3 rounded-full border border-[--primaryColor]"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <hr class="mt-12">
+    <!-- SKILLS Section -->
+    <section id="skillSection" class="skillSection mt-12 gap-6 flex flex-col items-center px-4 md:px-12">
+      <h1
+        class="text-4xl md:text-5xl font-extrabold text-white tracking-wide mb-12 underline decoration-[var(--primaryColor)] decoration-4 decoration-wavy drop-shadow-lg select-none">
+        My Skills
+      </h1>
+
+      <div
+        class="relative skillContainer w-full flex flex-col gap-8 justify-center items-center md:flex-row md:gap-12 flex-wrap">
+
+        <!-- Navigation Arrows (mobile only) -->
+        <button
+          class="skillLeftBtn z-20 absolute -left-8 top-[180px] w-14 h-14 bg-[#0e4b4b] shadow-2xl rounded-full flex justify-center items-center text-[var(--primaryColor)] text-4xl font-bold md:hidden hover:bg-[#147171] transition-colors">
+          &lt;
+        </button>
+        <button
+          class="skillRightBtn z-20 absolute -right-8 top-[180px] w-14 h-14 bg-[#0e4b4b] shadow-2xl rounded-full flex justify-center items-center text-[var(--primaryColor)] text-4xl font-bold md:hidden hover:bg-[#147171] transition-colors">
+          &gt;
+        </button>
+
+        <!-- Skill Card Template -->
+        <div class="usingBox flex flex-col gap-6 bg-gradient-to-br from-[#114141cc] via-[#166262cc] to-[#0b3f3fcc] shadow-2xl w-full max-w-[350px] min-w-[200px] h-[460px] rounded-3xl p-8 items-center justify-between
+      hover:scale-[1.05] transition-transform duration-300 cursor-default select-none">
+          <p class="text-3xl font-extrabold text-white drop-shadow-md tracking-wider">Primary</p>
+
+          <!-- Skill bars container -->
+          <div class="w-full space-y-5">
+            <!-- Skill Bar -->
+            <div class="relative w-full h-10 rounded-full bg-[#01360c] shadow-inner overflow-hidden">
+              <div data-aos="fade-right" data-aos-duration="1200"
+                class="bar absolute top-0 left-0 h-full rounded-full bg-gradient-to-r from-lime-400 via-green-400 to-green-600 shadow-[0_0_12px_#3aff44] w-[90%] flex items-center justify-center">
+                <p class="text-base text-[#1a1f00] font-semibold tracking-wide select-text">HTML</p>
+              </div>
+            </div>
+
+            <div class="relative w-full h-10 rounded-full bg-[#01360c] shadow-inner overflow-hidden">
+              <div data-aos="fade-right" data-aos-duration="1200"
+                class="bar absolute top-0 left-0 h-full rounded-full bg-gradient-to-r from-lime-300 via-green-300 to-green-500 shadow-[0_0_12px_#7bff00] w-[85%] flex items-center justify-center">
+                <p class="text-base text-[#1a1f00] font-semibold tracking-wide select-text">CSS</p>
+              </div>
+            </div>
+
+            <div class="relative w-full h-10 rounded-full bg-[#01360c] shadow-inner overflow-hidden">
+              <div data-aos="fade-right" data-aos-duration="1200"
+                class="bar absolute top-0 left-0 h-full rounded-full bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 shadow-[0_0_14px_#ffff33] w-[93%] flex items-center justify-center">
+                <p class="text-sm text-[#3a3a00] font-semibold tracking-wide select-text">JAVASCRIPT</p>
+              </div>
+            </div>
+
+            <div class="relative w-full h-10 rounded-full bg-[#01360c] shadow-inner overflow-hidden">
+              <div data-aos="fade-right" data-aos-duration="1200"
+                class="bar absolute top-0 left-0 h-full rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 shadow-[0_0_12px_#00ffff] w-[80%] flex items-center justify-center">
+                <p class="text-sm text-[#0a1f1f] font-semibold tracking-wide select-text">REACT</p>
+              </div>
+            </div>
+
+            <div class="relative w-full h-10 rounded-full bg-[#01360c] shadow-inner overflow-hidden">
+              <div data-aos="fade-right" data-aos-duration="1200"
+                class="bar absolute top-0 left-0 h-full rounded-full bg-gradient-to-r from-yellow-400 via-lime-400 to-lime-600 shadow-[0_0_12px_#d9ff00] w-[88%] flex items-center justify-center">
+                <p class="text-base text-[#232b00] font-semibold tracking-wide select-text">MY SQL</p>
+              </div>
+            </div>
+
+            <div class="relative w-full h-10 rounded-full bg-[#01360c] shadow-inner overflow-hidden">
+              <div data-aos="fade-right" data-aos-duration="1200"
+                class="bar absolute top-0 left-0 h-full rounded-full bg-gradient-to-r from-green-400 to-lime-500 shadow-[0_0_12px_#00ff11] w-[81%] flex items-center justify-center">
+                <p class="text-sm text-[#1a1f00] font-semibold tracking-wide select-text">PHP</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Learning Section -->
+        <div class="hidden learningBox shadow-2xl flex-col gap-6 bg-gradient-to-br from-[#114141cc] via-[#166262cc] to-[#0b3f3fcc] w-full max-w-[350px] min-w-[200px] h-[460px] rounded-3xl p-8 items-center justify-between md:flex
+      hover:scale-[1.05] transition-transform duration-300 cursor-default select-none">
+          <p class="text-3xl font-extrabold text-white drop-shadow-md tracking-wider">Learning</p>
+
+          <div class="w-full space-y-5">
+            <div class="relative w-full h-10 rounded-full bg-[#01360c] shadow-inner overflow-hidden">
+              <div data-aos="fade-right" data-aos-duration="1200"
+                class="bar absolute top-0 left-0 h-full rounded-full bg-gradient-to-r from-lime-300 via-yellow-400 to-yellow-500 shadow-[0_0_12px_#bfff00] w-[90%] flex items-center justify-center">
+                <p class="text-base text-[#1a1f00] font-semibold tracking-wide select-text">Node JS</p>
+              </div>
+            </div>
+
+            <div class="relative w-full h-10 rounded-full bg-[#01360c] shadow-inner overflow-hidden">
+              <div data-aos="fade-right" data-aos-duration="1200"
+                class="bar absolute top-0 left-0 h-full rounded-full bg-gradient-to-r from-yellow-300 via-lime-300 to-lime-500 shadow-[0_0_12px_#d9ff00] w-[60%] flex items-center justify-center">
+                <p class="text-sm text-[#1a1f00] font-semibold tracking-wide select-text">MongoDB Atlas</p>
+              </div>
+            </div>
+
+            <div class="relative w-full h-10 rounded-full bg-[#01360c] shadow-inner overflow-hidden">
+              <div data-aos="fade-right" data-aos-duration="1200"
+                class="bar absolute top-0 left-0 h-full rounded-full bg-gradient-to-r from-green-400 via-lime-400 to-lime-500 shadow-[0_0_12px_#77ff00] w-[75%] flex items-center justify-center">
+                <p class="text-sm text-[#1a1f00] font-semibold tracking-wide select-text">Java</p>
+              </div>
+            </div>
+
+            <div class="relative w-full h-10 rounded-full bg-[#01360c] shadow-inner overflow-hidden">
+              <div data-aos="fade-right" data-aos-duration="1200"
+                class="bar absolute top-0 left-0 h-full rounded-full bg-gradient-to-r from-green-400 to-lime-500 shadow-[0_0_12px_#00ff11] w-[81%] flex items-center justify-center">
+                <p class="text-sm text-[#1a1f00] font-semibold tracking-wide select-text">GIT</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other Skills Section -->
+        <div class="hidden otherBox shadow-2xl flex-col gap-6 bg-gradient-to-br from-[#114141cc] via-[#166262cc] to-[#0b3f3fcc] w-full max-w-[350px] min-w-[200px] h-[460px] rounded-3xl p-8 items-center justify-between md:flex
+      hover:scale-[1.05] transition-transform duration-300 cursor-default select-none">
+          <p class="text-3xl font-extrabold text-white drop-shadow-md tracking-wider">Other Skills</p>
+
+          <div class="w-full space-y-5">
+            <div class="relative w-full h-10 rounded-full bg-[#01360c] shadow-inner overflow-hidden">
+              <div data-aos="fade-right" data-aos-duration="1200"
+                class="bar absolute top-0 left-0 h-full rounded-full bg-gradient-to-r from-lime-300 via-green-300 to-green-500 shadow-[0_0_12px_#00ff11] w-[90%] flex items-center justify-center">
+                <p class="text-base text-[#1a1f00] font-semibold tracking-wide select-text">Teaching</p>
+              </div>
+            </div>
+
+            <div class="relative w-full h-10 rounded-full bg-[#01360c] shadow-inner overflow-hidden">
+              <div data-aos="fade-right" data-aos-duration="1200"
+                class="bar absolute top-0 left-0 h-full rounded-full bg-gradient-to-r from-lime-400 via-lime-500 to-lime-600 shadow-[0_0_12px_#7bff00] w-[90%] flex items-center justify-center">
+                <p class="text-base text-[#1a1f00] font-semibold tracking-wide select-text">Math</p>
+              </div>
+            </div>
+
+            <div class="relative w-full h-10 rounded-full bg-[#01360c] shadow-inner overflow-hidden">
+              <div data-aos="fade-right" data-aos-duration="1200"
+                class="bar absolute top-0 left-0 h-full rounded-full bg-gradient-to-r from-green-400 via-lime-400 to-lime-600 shadow-[0_0_12px_#44ff00] w-[85%] flex items-center justify-center">
+                <p class="text-sm text-[#1a1f00] font-semibold tracking-wide select-text">PRESENTATION</p>
+              </div>
+            </div>
+
+            <div class="relative w-full h-10 rounded-full bg-[#01360c] shadow-inner overflow-hidden">
+              <div data-aos="fade-right" data-aos-duration="1200"
+                class="bar absolute top-0 left-0 h-full rounded-full bg-gradient-to-r from-lime-400 via-lime-500 to-lime-600 shadow-[0_0_12px_#2bff00] w-[85%] flex items-center justify-center">
+                <p class="text-sm text-[#1a1f00] font-semibold tracking-wide select-text">PROBLEM SOLVING</p>
+              </div>
+            </div>
+
+            <div class="relative w-full h-10 rounded-full bg-[#01360c] shadow-inner overflow-hidden">
+              <div data-aos="fade-right" data-aos-duration="1200"
+                class="bar absolute top-0 left-0 h-full rounded-full bg-gradient-to-r from-lime-300 via-green-400 to-green-500 shadow-[0_0_12px_#00ff11] w-[90%] flex items-center justify-center">
+                <p class="text-sm text-[#1a1f00] font-semibold tracking-wide select-text">TEAM WORK</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Pagination Dots -->
+        <div class="roundContainer flex gap-3 self-center md:hidden mt-8">
+          <div
+            class="skillRound1 w-3 h-3 rounded-full bg-[var(--primaryColor)] border border-[var(--primaryColor)] transition-transform duration-300 hover:scale-125 cursor-pointer">
+          </div>
+          <div
+            class="skillRound2 w-3 h-3 rounded-full border border-[var(--primaryColor)] transition-transform duration-300 hover:scale-125 cursor-pointer">
+          </div>
+          <div
+            class="skillRound3 w-3 h-3 rounded-full border border-[var(--primaryColor)] transition-transform duration-300 hover:scale-125 cursor-pointer">
+          </div>
+        </div>
+      </div>
+
+      <p
+        class="mt-10 max-w-3xl text-center text-[#d3f1ec] text-lg leading-relaxed px-4 select-text font-medium tracking-wide">
+        I am proficient in <span class="font-semibold text-[var(--primaryColor)]">HTML, CSS, JavaScript, React,
+          Bootstrap, and PHP</span>,
+        enabling me to create responsive and visually appealing web applications. Currently, I am expanding my
+        expertise by learning
+        <span class="font-semibold text-[var(--primaryColor)]">Node.js, MongoDB, Java and GIT</span> to strengthen my
+        full-stack development skills.
+        In addition to technical skills, I excel in <span
+          class="font-semibold text-[var(--primaryColor)]">Teaching</span>,
+        and delivering impactful presentations.
+      </p>
+    </section>
+
+
+
+    <hr class="mt-12">
+    <!-- PROJECTS Section -->
+    <section id="projectSection"
+      class="projectSection mt-12 px-6 gap-10 flex flex-col items-center bg-gradient-to-b from-[#072727] to-[#0e4b4b] py-12 rounded-3xl shadow-inner max-w-[1300px] mx-auto">
+      <h1
+        class="font-extrabold text-4xl md:text-5xl text-white text-center tracking-wide mb-4 drop-shadow-lg underline decoration-[var(--primaryColor)] decoration-4">
+        PROJECTS PICTURES
+      </h1>
+      <p class="text-center max-w-xl text-[#d3f1eccc] text-lg font-medium mb-10 px-4 leading-relaxed">
+        Take a look at my portfolio to see a collection of my projects.
+      </p>
+
+      <div class="projectContainer grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 w-full max-w-[1200px]">
+
+        <!-- Project Card 1 -->
+        <div
+          class="card bg-[#123535] rounded-3xl shadow-lg overflow-hidden relative cursor-pointer group transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          data-project="1" onclick="openModal(1)">
+          <div class="w-full h-72 rounded-3xl overflow-hidden">
+            <img src="assets/project/proj1.png" alt="Project 1"
+              class="w-full h-full object-contain group-hover:brightness-90 transition-all duration-300" />
+          </div>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <h3 class="text-white text-xl font-bold mb-1 drop-shadow-md">Click Here</h3>
+            <p class="text-gray-300 text-sm">For More Details</p>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div
+          class="card bg-[#123535] rounded-3xl shadow-lg overflow-hidden relative cursor-pointer group transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          data-project="2" onclick="openModal(2)">
+          <div class="w-full h-72 rounded-3xl overflow-hidden">
+            <img src="assets/project/proj5.png" alt="Project 2"
+              class="w-full h-full object-contain group-hover:brightness-90 transition-all duration-300" />
+          </div>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <h3 class="text-white text-xl font-bold mb-1 drop-shadow-md">Click Here</h3>
+            <p class="text-gray-300 text-sm">For More Details</p>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div
+          class="card bg-[#123535] rounded-3xl shadow-lg overflow-hidden relative cursor-pointer group transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          data-project="3" onclick="openModal(3)">
+          <div class="w-full h-72 rounded-3xl overflow-hidden">
+            <img src="assets/project/proj6.png" alt="Project 3"
+              class="w-full h-full object-contain group-hover:brightness-90 transition-all duration-300" />
+          </div>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <h3 class="text-white text-xl font-bold mb-1 drop-shadow-md">Click Here</h3>
+            <p class="text-gray-300 text-sm">For More Details</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Overlay -->
+      <div id="projectModal" class="fixed inset-0 bg-black bg-opacity-75 hidden justify-center items-center z-50 p-4">
+        <div class="bg-[#123535] rounded-3xl max-w-lg w-full p-8 relative shadow-2xl">
+          <button onclick="closeModal()"
+            class="absolute top-4 right-4 text-white text-3xl font-bold hover:text-[var(--primaryColor)]">&times;</button>
+          <h2 id="modalTitle" class="text-2xl font-bold text-white mb-4"></h2>
+          <p id="modalDescription" class="text-gray-300 leading-relaxed text-lg"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inside your script tag: -->
+    <script>
+      const projects = {
+        1: {
+          title: "Clinical Management System - Patient Panel",
+          description: `This module allows patients to register, book appointments, and view their medical history. 
+      Features include secure login, appointment calendar, and real-time updates. 
+      Built with PHP, MySQL, and responsive CSS for a seamless user experience.`
+        },
+        2: {
+          title: "Clinical Management System - Doctor Panel",
+          description: `Designed for doctors to manage patient appointments, review patient records, 
+      and update treatment notes efficiently. 
+      Incorporates dynamic scheduling and notification systems to streamline clinical workflow. 
+      Developed using PHP and MySQL with a user-friendly interface.`
+        },
+        3: {
+          title: "Clinical Management System - Admin Dashboard",
+          description: `Admin dashboard offers comprehensive management of doctors, patients, and appointments.
+      Features include role-based access control, report generation, and system monitoring. 
+      Implemented with PHP, MySQL, and modern CSS for optimal performance and security.`
+        }
+      };
+
+      function openModal(id) {
+        const modal = document.getElementById("projectModal");
+        const title = document.getElementById("modalTitle");
+        const desc = document.getElementById("modalDescription");
+
+        title.textContent = projects[id].title;
+        desc.innerHTML = projects[id].description;
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      }
+
+      function closeModal() {
+        const modal = document.getElementById("projectModal");
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      }
+
+      document.getElementById("projectModal").addEventListener("click", (e) => {
+        if (e.target.id === "projectModal") {
+          closeModal();
+        }
+      });
+    </script>
+
+    <hr class="mt-12">
+
+    <!-- PROJECTS VIDEO SECTION -->
+    <section id="projectSection" class="projectSection mt-8 px-4 gap-8 flex flex-col items-center">
+      <h1 class="font-bold text-3xl">PROJECTS VIDEO</h1>
+      <p>Take a look at my portfolio to see a collection of my projects Videos.</p>
+
+      <div class="projectContainer grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full max-w-[1200px] mt-8">
+
+        <div class="wrap relative">
+          <div class="hint absolute bottom-0 w-full h-full hover:transition rounded-2xl"></div>
+          <video class="rounded-2xl w-full max-w-[3500px]" controls>
+            <source src="assets/Videos/Solar System.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <video class="rounded-2xl w-full max-w-[350px]" controls>
+          <source src="assets/video/solarsystem.mp4" type="video/mp4">
+        </video>
+
+        <video class="rounded-2xl w-full max-w-[350px]" controls>
+          <source src="assets/videos/video3.mp" type="video/mp4">
+        </video>
+
+      </div>
+    </section>
+
+    <hr class="mt-12">
+
+    <!-- CERTIFICATES SECTION -->
+    <section id="certificateSection"
+      class="mt-16 px-4 py-12 bg-gradient-to-b from-[#072727] to-[#0e4b4b] rounded-3xl shadow-inner">
+      <h1
+        class="text-4xl md:text-5xl font-extrabold text-white text-center mb-4 underline decoration-[var(--primaryColor)] decoration-4 drop-shadow">
+        CERTIFICATES
+      </h1>
+      <p class="text-center text-[#d3f1ec] max-w-2xl mx-auto mb-12 text-lg">
+        Explore a few certifications earned during my professional journey.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4">
+
+        <!-- Card 1 -->
+        <div
+          class="bg-[#0f4040] rounded-xl shadow-lg hover:shadow-2xl transition p-4 flex flex-col items-center text-center">
+          <div class="w-full h-72 overflow-hidden rounded-lg border border-[var(--primaryColor)] shadow-inner group">
+            <img src="assets/img/intership.png" alt="Internship Certificate 1"
+              class="w-full h-full object-cover rounded-md group-hover:scale-105 transition-transform duration-300 ease-in-out" />
+          </div>
+          <p class="text-[#d3f1ec] text-sm font-medium mt-4">
+            A heartfelt thank you to <span class="font-bold text-[var(--primaryColor)]">Rhombix Technologies</span> for
+            turning challenges into stepping stones!
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="bg-[#0f4040] rounded-xl shadow-lg hover:shadow-2xl transition p-4 flex flex-col items-center text-center">
+          <div class="w-full h-72 overflow-hidden rounded-lg border border-[var(--primaryColor)] shadow-inner group">
+            <img src="assets/img/InterShips.jpg" alt="Internship Certificate 2"
+              class="w-full h-full object-cover rounded-md group-hover:scale-105 transition-transform duration-300 ease-in-out" />
+          </div>
+          <p class="text-[#d3f1ec] text-sm font-medium mt-4">
+            Big thanks to <span class="font-bold text-[var(--primaryColor)]">TechnoHacks Solutions</span> for an
+            impactful internship experience.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="bg-[#0f4040] rounded-xl shadow-lg hover:shadow-2xl transition p-4 flex flex-col items-center text-center">
+          <div class="w-full h-72 overflow-hidden rounded-lg border border-[var(--primaryColor)] shadow-inner group">
+            <img src="assets/img/Clear_Cr.png" alt="Clearance Certificate"
+              class="w-full h-full object-cover rounded-md group-hover:scale-105 transition-transform duration-300 ease-in-out" />
+          </div>
+          <p class="text-[#d3f1ec] text-sm font-medium mt-4">
+            Completed my graduation in 2024. Received clearance from Govt. Boys College Skardu.
+            <span id="moreText" class="hidden"> The 4-year CS journey was transformative and rich in learning.</span>
+            <span id="readMoreBtn" class="text-[var(--primaryColor)] font-semibold cursor-pointer underline ml-1">Read
+              more</span>
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="bg-[#0f4040] rounded-xl shadow-lg hover:shadow-2xl transition p-4 flex flex-col items-center text-center">
+          <div class="w-full h-72 overflow-hidden rounded-lg border border-[var(--primaryColor)] shadow-inner group">
+            <img src="assets/img/InterShips.jpg" alt="Internship Certificate 3"
+              class="w-full h-full object-cover rounded-md group-hover:scale-105 transition-transform duration-300 ease-in-out" />
+          </div>
+          <p class="text-[#d3f1ec] text-sm font-medium mt-4">
+            Again, thanks to <span class="font-bold text-[var(--primaryColor)]">TechnoHacks</span> for empowering me
+            with industry-ready skills.
+          </p>
+        </div>
+
+      </div>
+    </section>
+    <script>
+      const moreText = document.getElementById("moreText");
+      const readMoreBtn = document.getElementById("readMoreBtn");
+
+      readMoreBtn.addEventListener("click", () => {
+        moreText.classList.toggle("hidden");
+        readMoreBtn.textContent = moreText.classList.contains("hidden") ? "Read more" : "Read less";
+      });
+    </script>
+
+
+  </main>
+  <hr class="mt-12">
+  <footer id="contactSection" class="mt-4 gap-4 flex flex-col items-center w-full px-4 max-w-[1530px] mx-auto md:px-8">
+    <h1 class="text-3xl font-bold">CONTACT ME</h1>
+
+    <!-- Top Section -->
+    <div class="wrap flex flex-col gap-4 items-center w-full mt-4 lg:flex-row lg:justify-center lg:gap-8">
+      <div class="top flex flex-wrap gap-4 justify-center md:gap-8 lg:flex-col lg:justify-start lg:self-start lg:gap-8">
+        <div
+          class="home shadow-lg flex flex-col justify-center items-center p-2 w-[100px] h-[100px] bg-[var(--secondaryColor)] gap-2 rounded-lg">
+          <i class="fa-solid fa-house text-[var(--primaryColor)] text-2xl"></i>
+          <p class="text-[var(--primaryColor)] font-semibold text-xs">Skardu</p>
+        </div>
+
+        <a href="tel:+923554108322"
+          class="phone shadow-lg flex flex-col justify-center items-center w-[100px] h-[100px] bg-[var(--secondaryColor)] gap-2 p-2 rounded-lg">
+          <i class="fa-solid fa-phone text-[var(--primaryColor)] text-2xl"></i>
+          <button class="bg-[var(--primaryColor)] rounded-full px-2 text-[#695900] font-semibold text-xs">Call me</button>
+        </a>
+
+        <a href="mailto:sakhawatalisakhi32@gmail.com"
+          class="mail shadow-lg flex flex-col justify-center items-center w-[100px] h-[100px] bg-[var(--secondaryColor)] gap-2 rounded-lg">
+          <i class="fa-solid fa-envelope text-[var(--primaryColor)] text-3xl"></i>
+        </a>
+      </div>
+
+      <!-- Form Section -->
+      <form class="bottom w-full flex flex-col gap-4 py-4 rounded-lg lg:w-[50%] lg:pt-0"
+        action="https://formspree.io/f/xbldyjoa" method="post">
+        <input
+          class="outline-none w-full px-4 py-4 bg-[var(--secondaryColor)] rounded-lg text-[#FFFFB5] placeholder-[#f5f5c077]"
+          type="text" required placeholder="Name *" name="Name">
+        <input
+          class="outline-none w-full px-4 py-4 bg-[var(--secondaryColor)] rounded-lg text-[#FFFFB5] placeholder-[#f5f5c077]"
+          type="email" required placeholder="Enter your email address *" name="Email Address">
+        <input
+          class="outline-none w-full px-4 py-4 bg-[var(--secondaryColor)] rounded-lg text-[#FFFFB5] placeholder-[#f5f5c077]"
+          type="tel"required placeholder="Enter your phone number" name="Phone No">
+        <textarea class="outline-none bg-[var(--secondaryColor)] rounded-lg p-4 text-[#FFFFB5] placeholder-[#f5f5c077]"
+          rows="5" placeholder="Type your message here . . ." name="Message"></textarea>
+        <button
+          class="bg-[var(--primaryColor)] mt-4 w-fit self-center rounded-full px-12 py-4 text-[#695900] font-semibold active:bg-[var(--btnActiveColor)]">
+          Send Message
+        </button>
+      </form>
+    </div>
+
+    <!-- Footer Section -->
+    <hr class="w-full mt-8">
+    <div class="copyRightContainer flex flex-col items-center justify-between gap-4 px-4 w-full pt-4">
+
+      <div class="logoContainer flex mb-6 gap-8 justify-evenly w-fit lg:mr-12">
+        <a target="_blank" href="https://github.com/SakhawatSakhi"><i
+            class="fa-brands fa-github text-[var(--primaryColor)] text-5xl active:text-[var(--btnActiveColor)] lg:text-5xl"></i></a>
+        <a target="_blank"
+          href="https://wa.me/923412428786?text=Hi%20there!%20I%20would%20like%20to%20get%20in%20touch%20with%20you."><i
+            class="fa-brands fa-whatsapp text-[var(--primaryColor)] text-5xl active:text-[var(--btnActiveColor)] lg:text-5xl"></i></a>
+        <a target="_blank" href="https://www.linkedin.com/in/sakhi786/"><img class="w-[44px] lg:w-[px]"
+            src="assets/icons/linkdin.svg" alt=""></a>
+      </div>
+      <p class="text-center mb-4 mx-4 text-sm lg:text-left">© 2024 <i>Sakhawat Ali.</i> All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2025/01/30/11/20250130113317-0210GOFV.js"></script>
+
+</body>
+<script src="script.js"></script>
+
+</html>
