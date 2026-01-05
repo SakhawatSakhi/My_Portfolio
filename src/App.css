@@ -1,170 +1,52 @@
-@tailwind base;
+ @tailwind base;
 @tailwind components;
 @tailwind utilities;
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-html {
+html{
   scroll-behavior: smooth;
 }
-::-webkit-scrollbar {
+::-webkit-scrollbar{
   display: none;
 }
-:root {
-  --primaryColor: #ffd700;
-  --themeColor: #012429;
-  --paragraphColor: #9e957c;
-  --fontColor: white;
-  --anchorColor: white;
-  --secondaryColor: #0a3336;
-  --btnActiveColor: #887200;
+:root{
+    --primaryColor: #FFD700;
+    --themeColor: #012429;
+    --paragraphColor: #9E957C;
+    --fontColor: white;
+    --anchorColor: white;
+    --secondaryColor: #0a3336;
+    --btnActiveColor: #887200;
+
 }
 
-i {
-  transition: all 0.3s ease;
+
+i{
+  transition: all 0.3s ease; 
   cursor: pointer;
+
 }
 
-button {
+button{
   transition: all 0.3s ease;
 }
 
-button:hover {
+button:hover{
   background-color: #dbb700;
 }
 i:hover {
-  font-size: xx-large;
+  font-size:xx-large; 
   /* Increases font size on hover */
 }
-
 .animate {
   animation: fadeIn 2s ease-in-out;
 }
-body {
-  font-family: "Poppins", sans-serif;
-}
-/* header */
-#header-fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  z-index: 1000;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 12px;
-
-  background-color: rgba(0, 43, 49, 0.95);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Proflie_img */
-.profile_img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  margin: auto;
-  border: 6px solid #facc15;
-  padding: 4px;
-  background-color: #fff;
-}
-/* Hover animation */
-.profile_img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 1px 50px green;
-  cursor: pointer;
-}
-
-.fancy-link {
-  position: relative;
-  color: #ffffff;
-  font-weight: 500;
-  font-size: 16px;
-  padding: 4px 0;
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
-/* Animated gradient underline */
-.fancy-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #ffd700, #ffa500);
-  border-radius: 2px;
-  transition: width 0.3s ease;
-}
-
-.fancy-link:hover {
-  color: #ffd700;
-  transform: scale(1.05);
-}
-
-.fancy-link:hover::after {
-  width: 100%;
-}
-
-/* Optional subtle glow on hover */
-.fancy-link:hover {
-  text-shadow: 0 0 6px rgba(255, 215, 0, 0.6);
-}
-
-/* Beautiful Education Circle */
-.Education {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  /* Gradient border using background-clip trick */
-  background: conic-gradient(#facc15, #f59e0b, #facc15, #f59e0b);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  position: relative;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* soft 3D shadow */
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-/* Inner white circle to create border effect */
-.Education::before {
-  content: "";
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: #fff;
-  z-index: 1;
-}
-
-/* Number styling */
-.Education span {
-  position: relative;
-  z-index: 2; /* on top of the inner circle */
-  font-size: 26px;
-  font-weight: 700;
-  color: #f59e0b; /* golden color */
-  font-family: "Arial", sans-serif;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* subtle shadow */
-  transition: transform 0.3s;
-}
-
-/* Hover animation */
-.Education:hover {
-  transform: scale(1.15);
-  box-shadow: 0 12px 30px rgba(231, 245, 243, 0.986);
-}
-
-.Education:hover span {
-  transform: rotate(-1080deg) scale(1.1);
+body{
+    font-family: "Poppins", sans-serif;
+    
 }
 
 @layer base {
@@ -172,7 +54,7 @@ body {
     @apply text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
     color: var(--fontColor);
   }
-
+  
   h2 {
     @apply text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
     color: var(--fontColor);
@@ -204,10 +86,43 @@ body {
     color: var(--paragraphColor);
   }
 
-  a {
+  a{
     @apply text-base lg:text-lg;
     color: var(--anchorColor);
   }
 }
+/* Profile Picture */
+#Profile_img {
+  border: 5px solid yellow; 
+  border-radius: 50%; 
+  width: 150px; 
+  height: 150px; 
+  object-fit: cover;
+}
 
+/* Education Mark */
+.outer_border {
+  border: 5px solid transparent; 
+  border-radius: 50%;
+  padding: 10px; 
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: conic-gradient(rgb(221, 221, 65) 0% 50%, lightblue 50% 100%);
+}
 
+.iner_border {
+  border: 2px solid yellow; 
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #f8f5f5;
+  position: relative;
+  background-color: black; 
+} 
